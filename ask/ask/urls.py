@@ -3,20 +3,13 @@ from django.conf.urls import include, url
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = [
-    # Examples:
-    # url(r'^$', 'ask.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-    url(r'^$', basetemp, {'url':'/?page=','order':'-added_ad'}),
-	url(r'^login/.*$', loginform),
-	url(r'^logout/.*$', logoutPage),
-	url(r'^signup/.*$', signupform),
-	url(r'^question/(?P<slug>\d+)/$', questpage),
-	url(r'^question/$', askform),
-	url(r'^ask/.*$', askform),
-	url(r'^popular/.*$', basetemp, {'url':'/popular/?page=','order':'-likes'}),
-	url(r'^new/.*$', test),
-	url(r'^answer/.*$', newanswer),
+urlpatterns = patterns('qa.views',                                              
+   url(r'^$', 'test'),                                                              
+   url(r'^login/.*$', 'test', name='login'),                                    
+   url(r'^signup/.*', 'test', name='signup'),                                   
+   url(r'^question/(?P<id>[0-9]+)/$', 'test', name='question'),                 
+   url(r'^ask/.*', 'test', name='ask'),                                         
+   url(r'^popular/.*', 'test', name='popular'),                                 
+   url(r'^new/.*', 'test', name='new'),                                         
+)    
 
-    url(r'^admin/', include(admin.site.urls)),
-]
