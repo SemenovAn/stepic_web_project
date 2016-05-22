@@ -2,9 +2,9 @@ CONFIG = {
     'mode': 'wsgi',
     'python': '/usr/bin/python3',
     'environment': {
-        'PYTHONPATH': '/home/box/web/ask',
+        'PYTHONPATH': '/home/box/web/ask/ask/',
     },
-    'working_dir': '/home/box/web/ask/ask',
+    'working_dir': '/home/box/web/ask/ask/',
      'user': 'www-data',
      'group': 'www-data',
     'args': (
