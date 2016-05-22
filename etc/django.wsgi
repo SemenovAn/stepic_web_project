@@ -1,5 +1,5 @@
 CONFIG = {
-    'mode': 'wsgi',
+    'mode': django,
     #'python': '/usr/bin/python3',
     #'environment': {
     #    'PYTHONPATH': '/home/box/web/ask',
