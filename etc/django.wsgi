@@ -7,7 +7,7 @@ CONFIG = {
     # 'user': 'www-data',
     # 'group': 'www-data',
     'args': (
-        # '--bind=127.0.0.1:8000',
+        '--bind=127.0.0.1:8000',
         '--workers=1',
 		# '--daemon'
         # '--worker-class=egg:gunicorn#sync',
